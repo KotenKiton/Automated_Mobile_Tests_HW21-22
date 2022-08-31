@@ -12,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 public class SearchTests extends TestBase {
     @Test
     void searchTest() {
+        switchTo().alert().accept();
         back();
         step("Type search", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
@@ -24,8 +25,8 @@ public class SearchTests extends TestBase {
 
     @Test
     void searchWithByTextLocatorTest() {
-        back();
         switchTo().alert().accept();
+        back();
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
