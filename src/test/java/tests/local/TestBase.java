@@ -13,6 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static io.qameta.allure.Allure.step;
+import static io.restassured.RestAssured.sessionId;
 
 public class TestBase {
     @BeforeAll
@@ -35,5 +36,6 @@ public class TestBase {
         Attach.pageSource();
 
         step("Close driver", Selenide::closeWebDriver);
+        Attach.video(sessionId);
     }
 }
