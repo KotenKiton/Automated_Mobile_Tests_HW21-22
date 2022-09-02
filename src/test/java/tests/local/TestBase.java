@@ -17,17 +17,17 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
-import static io.restassured.RestAssured.sessionId;
+
 
 public class TestBase {
-    // static String deviceHost = System.getProperty("deviceHost", "local");
+    static String deviceHost = System.getProperty("deviceHost", "local"); //локально
 
-    static String deviceHost = System.getProperty("deviceHost", "browserstack");
+    //static String deviceHost = System.getProperty("deviceHost", "browserstack"); // в Браузестеке.
 
     @BeforeAll
 
     public static void setup() {
-        //Configuration.timeout=15000;// Не хватает тайминга для прогрузки.Без таймаутов тест падает
+        Configuration.timeout = 15000;// Не хватает тайминга для прогрузки.Без таймаутов тест падает
         if (Objects.equals(deviceHost, "browserstack"))
             Configuration.browser = BrowserstackMobileDriver.class.getName();
         else {
