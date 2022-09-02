@@ -1,9 +1,11 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import config.LocalConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -17,6 +19,9 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class LocalMobileDriver implements WebDriverProvider {
 
+    static LocalConfig localConfig = ConfigFactory.create(LocalConfig.class, System.getProperties());
+
+
     @Override
     public WebDriver createDriver(Capabilities capabilities) {
 
@@ -25,8 +30,8 @@ public class LocalMobileDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-        options.setPlatformName("Android");
-        options.setDeviceName("Pixel 3 API 33");
+        options.setPlatformName(localConfig.platformName());
+        options.setDeviceName(localConfig.device());
         options.setPlatformVersion("13.0");
         options.setApp(app.getAbsolutePath());
         options.setAppPackage("org.wikipedia.alpha");
