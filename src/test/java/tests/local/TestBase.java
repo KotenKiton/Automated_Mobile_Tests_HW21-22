@@ -27,7 +27,7 @@ public class TestBase {
     @BeforeAll
 
     public static void setup() {
-        Configuration.timeout=15000;// Не хватает тайминга для прогрузки.Без таймаутов тест падает
+        //Configuration.timeout=15000;// Не хватает тайминга для прогрузки.Без таймаутов тест падает
         if (Objects.equals(deviceHost, "browserstack"))
             Configuration.browser = BrowserstackMobileDriver.class.getName();
         else {

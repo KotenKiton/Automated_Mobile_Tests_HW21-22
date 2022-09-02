@@ -17,7 +17,6 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class LocalMobileDriver implements WebDriverProvider {
 
-
     @Override
     public WebDriver createDriver(Capabilities capabilities) {
 
@@ -28,7 +27,7 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
         options.setDeviceName("Pixel 3 API 33");
-        //options.setPlatformVersion("13.0");
+        options.setPlatformVersion("13.0");
         options.setApp(app.getAbsolutePath());
         options.setAppPackage("org.wikipedia.alpha");
         options.setAppActivity("org.wikipedia.main.MainActivity");
