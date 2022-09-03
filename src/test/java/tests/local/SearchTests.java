@@ -59,6 +59,12 @@ public class SearchTests extends TestBase {
     void savedScreenTest() {
         switchTo().alert().accept();//Only for local tests.//For Browserstack need commit
         back();
-        $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click();
+        step("Open More menu", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click());
+        step("Verify Menu contains Donate item", () ->
+                $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/" +
+                        "android.widget.FrameLayout/android.widget.FrameLayout/android.widget" +
+                        ".FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.TextView"))
+                        .shouldHave(text("Saved")));
     }
 }
