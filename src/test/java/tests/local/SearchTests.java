@@ -15,7 +15,8 @@ public class SearchTests extends TestBase {
     @Test
     @DisplayName("Проверка кнопки поиск")
     void searchTest() {
-        //switchTo().alert().accept();//Only local test. For BS //
+        switchTo().alert().accept();//Only for local tests.//For Browserstack need  commit
+
         back();
         step("Type search", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
@@ -28,37 +29,36 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    void searchWithByTextLocatorTest() {
-        //switchTo().alert().accept();//Only local test. For BS //
-        back();
-        step("Type search", () -> {
-            $(AppiumBy.accessibilityId("Search Wikipedia")).click();
-            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
-        });
-        step("Verify content found", () ->
-                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
-                        .shouldHave(CollectionCondition.sizeGreaterThan(0)));
-    }
-
-    @Test
     @DisplayName("Задание №11-Онбординг")
     void onboardingCheckTest() {
-        //switchTo().alert().accept();//Only local test. For BS //
+        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit
+
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                 .shouldHave(text("The Free Encyclopedia …in over 300 languages"));
+
         $(AppiumBy.xpath("//android.widget.LinearLayout[2]")).click();
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                 .shouldHave(text("New ways to explore"));
+
         $(AppiumBy.id("org.wikipedia.alpha:id/secondaryTextView"))
                 .shouldHave(text("Dive down the Wikipedia rabbit hole with a constantly updating Explore feed. " +
                         "Customize the feed to your interests – whether it’s learning about historical events On this day, " +
                         "or rolling the dice with Random."));
+
         $(AppiumBy.xpath("//android.widget.LinearLayout[3]")).click();
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                 .shouldHave(text("Reading lists with sync"));
+
         $(AppiumBy.xpath("//android.widget.LinearLayout[4]")).click();
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                 .shouldHave(text("Send anonymous data"));
     }
 
+    @Test
+    @DisplayName("Проверка запуска экрана Saved")
+    void savedScreenTest() {
+        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit
+        back();
+        $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click();
+    }
 }
