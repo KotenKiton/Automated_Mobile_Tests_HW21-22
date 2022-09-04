@@ -15,7 +15,7 @@ public class SearchTests extends TestBase {
     @Test
     @DisplayName("Проверка кнопки поиск")
     void searchTest() {
-        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
 
         back();
         step("Type search", () -> {
@@ -31,7 +31,7 @@ public class SearchTests extends TestBase {
     @Test
     @DisplayName("Задание №11-Онбординг")
     void onboardingCheckTest() {
-        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
 
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                 .shouldHave(text("The Free Encyclopedia …in over 300 languages"));
@@ -57,13 +57,13 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка запуска экрана Saved")
+    @DisplayName("Запуск экрана Saved")
     void savedScreenTest() {
-        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
         step("Open menu Saved", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click());
-        step("Verify Menu contains Donate item", () ->
+        step("Assert Menu contains text Saved", () ->
                 $(AppiumBy.xpath("/hierarchy/android.widget" +
                         ".FrameLayout/android.widget.LinearLayout/" +
                         "android.widget.FrameLayout/android.widget" +
@@ -73,14 +73,47 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка экрана Log in/Join Wiki")
+    @DisplayName("Запуск экрана Log in/Join Wiki через экран Saved")
     void savedLogInTest() {
-        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
         step("Open menu", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click());
         $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click();
-        step("Verify Menu contains Login item", () ->
+        step("Assert Menu contains text Create an account", () ->
+                $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android" +
+                        ".widget.LinearLayout/android.widget.FrameLayout/" +
+                        "android.view.ViewGroup/android.widget.FrameLayout[1]" +
+                        "/android.view.ViewGroup/android.widget.TextView"))
+                        .shouldHave(text("Create an account")));
+    }
+
+    @Test
+    @DisplayName("Запуск экрана Edits")
+    void editsScreenTest() {
+        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        back();
+        step("Open menu Edits", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_edits")).click());
+        step("Assert Menu contains text Edits", () ->
+                $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android" +
+                        ".widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android" +
+                        ".widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android" +
+                        ".widget.TextView"))
+                        .shouldHave(text("Edits")));
+
+    }
+
+    @Test
+    @DisplayName("Запуск экрана Log in/Join Wiki через экран Edits")
+    void editsLoginTest() {
+        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        back();
+        step("Open menu Edits", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_edits")).click());
+        step("Click button Log in/Join Wiki", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click());
+        step("Assert Menu contains text Create an account",() ->
                 $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android" +
                         ".widget.LinearLayout/android.widget.FrameLayout/" +
                         "android.view.ViewGroup/android.widget.FrameLayout[1]" +
