@@ -93,9 +93,9 @@ public class SearchTests extends TestBase {
     void editsScreenTest() {
         switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
-        step("Open menu Edits", () ->
+        step("Open menu 'Edits'", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_edits")).click());
-        step("Assert Menu contains text Edits", () ->
+        step("Assert Menu 'Edits' contains text 'Edits'", () ->
                 $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android" +
                         ".widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android" +
                         ".widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android" +
@@ -105,15 +105,15 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Запуск экрана Log in/Join Wiki через экран Edits")
+    @DisplayName("Запуск экрана 'Log in/Join Wiki' через экран Edits")
     void editsLoginTest() {
         switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
-        step("Open menu Edits", () ->
+        step("Open menu 'Edits'", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_edits")).click());
-        step("Click button Log in/Join Wiki", () ->
+        step("Click button 'Log in/Join Wiki'", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click());
-        step("Assert Menu contains text Create an account",() ->
+        step("Assert Menu 'Log in' contains text 'Create an account'",() ->
                 $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android" +
                         ".widget.LinearLayout/android.widget.FrameLayout/" +
                         "android.view.ViewGroup/android.widget.FrameLayout[1]" +
