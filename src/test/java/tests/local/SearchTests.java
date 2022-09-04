@@ -63,7 +63,7 @@ public class SearchTests extends TestBase {
         back();
         step("Open menu Saved", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click());
-        step("Assert Menu contains text Saved", () ->
+        step("Assert Menu 'Saved' contains text 'Saved'", () ->
                 $(AppiumBy.xpath("/hierarchy/android.widget" +
                         ".FrameLayout/android.widget.LinearLayout/" +
                         "android.widget.FrameLayout/android.widget" +
@@ -77,10 +77,11 @@ public class SearchTests extends TestBase {
     void savedLogInTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
-        step("Open menu", () ->
+        step("Open menu Saved", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click());
-        $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click();
-        step("Assert Menu contains text Create an account", () ->
+        step("Click button 'Log in/Join Wiki'", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click());
+        step("Assert Menu 'Log in' contains text 'Create an account'", () ->
                 $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android" +
                         ".widget.LinearLayout/android.widget.FrameLayout/" +
                         "android.view.ViewGroup/android.widget.FrameLayout[1]" +
@@ -113,7 +114,7 @@ public class SearchTests extends TestBase {
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_edits")).click());
         step("Click button 'Log in/Join Wiki'", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/positiveButton")).click());
-        step("Assert Menu 'Log in' contains text 'Create an account'",() ->
+        step("Assert Menu 'Log in' contains text 'Create an account'", () ->
                 $(AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android" +
                         ".widget.LinearLayout/android.widget.FrameLayout/" +
                         "android.view.ViewGroup/android.widget.FrameLayout[1]" +
