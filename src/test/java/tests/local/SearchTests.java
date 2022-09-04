@@ -16,11 +16,11 @@ public class SearchTests extends TestBase {
     @DisplayName("Проверка кнопки поиск")
     void searchTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
-
         back();
         step("Type search", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
-            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
+            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text"))
+                    .sendKeys("Appium");
         });
         step("Verify content found", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
@@ -32,7 +32,6 @@ public class SearchTests extends TestBase {
     @DisplayName("Задание №11-Онбординг")
     void onboardingCheckTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
-
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                 .shouldHave(text("The Free Encyclopedia …in over 300 languages"));
 
@@ -92,7 +91,7 @@ public class SearchTests extends TestBase {
     @Test
     @DisplayName("Запуск экрана Edits")
     void editsScreenTest() {
-        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
         step("Open menu 'Edits'", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_edits")).click());
@@ -108,7 +107,7 @@ public class SearchTests extends TestBase {
     @Test
     @DisplayName("Запуск экрана 'Log in/Join Wiki' через экран Edits")
     void editsLoginTest() {
-        switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
+        //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
         step("Open menu 'Edits'", () ->
                 $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_edits")).click());

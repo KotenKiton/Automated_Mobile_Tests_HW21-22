@@ -20,14 +20,14 @@ import static io.qameta.allure.Allure.step;
 
 
 public class TestBase {
-    static String deviceHost = System.getProperty("deviceHost", "local"); //локально
+    //static String deviceHost = System.getProperty("deviceHost", "local"); //локально
 
-    //static String deviceHost = System.getProperty("deviceHost", "browserstack"); // в Браузестеке.
+    static String deviceHost = System.getProperty("deviceHost", "browserstack"); // в Браузестеке.
 
     @BeforeAll
 
     public static void setup() {
-        Configuration.timeout = 15000;// Не хватает тайминга для прогрузки.Без таймаутов тест падает(ONLY ЛОКАЛКА)
+        //Configuration.timeout = 15000;// Не хватает тайминга для прогрузки.Без таймаутов тест падает(ONLY ЛОКАЛКА)
         if (Objects.equals(deviceHost, "browserstack"))
             Configuration.browser = BrowserstackMobileDriver.class.getName();
         else {
