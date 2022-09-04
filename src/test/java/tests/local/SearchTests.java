@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 @Tag("android")
 public class SearchTests extends TestBase {
     @Test
-    @DisplayName("Проверка кнопки поиск")
+    @DisplayName("Проверка кнопки 'поиск'")
     void searchTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
@@ -56,7 +56,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Запуск экрана Saved")
+    @DisplayName("'Запуск экрана Saved'")
     void savedScreenTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
@@ -72,7 +72,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Запуск экрана Log in/Join Wiki через экран Saved")
+    @DisplayName("Запуск экрана 'Log in/Join Wiki' через экран 'Saved'")
     void savedLogInTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
@@ -89,7 +89,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Запуск экрана Edits")
+    @DisplayName("Запуск экрана 'Edits'")
     void editsScreenTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
