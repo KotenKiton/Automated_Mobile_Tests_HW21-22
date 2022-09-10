@@ -36,7 +36,6 @@ public class TestBase {
 
         Configuration.browserSize = null;
     }
-
     @BeforeEach
     public void startDriver() {
         addListener("AllureSelenide", new AllureSelenide());
