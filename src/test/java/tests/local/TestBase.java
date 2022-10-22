@@ -13,7 +13,6 @@ import org.junit.jupiter.api.BeforeEach;
 
 import java.util.Objects;
 
-import static com.codeborne.selenide.Selenide.back;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.sessionId;
@@ -26,7 +25,6 @@ public class TestBase {
     static String deviceHost = System.getProperty("deviceHost", "browserstack"); // в Браузестеке.
 
     @BeforeAll
-
     public static void setup() {
         //Configuration.timeout = 15000;// Не хватает тайминга для прогрузки.Без таймаутов тест падает(ONLY локал.тесты)
         if (Objects.equals(deviceHost, "browserstack"))
