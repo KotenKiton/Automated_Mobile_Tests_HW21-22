@@ -22,7 +22,7 @@ import static io.qameta.allure.Allure.step;
 public class TestBase {
     //static String deviceHost = System.getProperty("deviceHost", "local"); //локально
 
-    static String deviceHost = System.getProperty("deviceHost", "browserstack"); // в Браузестеке.
+    static String deviceHost = System.getProperty("deviceHost", "browserstack"); // For Browserstack
 
     @BeforeAll
     public static void setup() {
