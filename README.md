@@ -64,7 +64,7 @@ gradle clean android -Dhost=local
 gradle clean android -Dhost=browserstack
 ```
 
-## 👽 Отчет BrowserStack
+## :computer: Отчет BrowserStack
 
 <img title="BrowserStack dashboard" src="images/title/BrowserStackReport.png">
 
