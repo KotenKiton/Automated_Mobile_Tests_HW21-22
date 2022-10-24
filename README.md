@@ -4,7 +4,7 @@
 
 #### <a target="_blank" href="https://github.com/wikimedia/apps-android-wikipedia/releases">Ссылка на репозиторий приложения</a>
 
-## :floppy_disk: Содержание:
+## :page_with_curl: Содержание:
 
 - <a href="#computer-технологии-и-инструменты">Технологии и инструменты</a>
 - <a href="#notebook_with_decorative_cover-реализованные-проверки">Реализованные проверки</a>
@@ -40,7 +40,6 @@
 - Проверка экрана 'Log in/Join Wiki' через экран 'Saved'
 - Проверка экрана 'Edits'
 - Проверка экрана 'Log in/Join Wiki' через экран Edits
--
 
 ## :electric_plug: Сборка в Jenkins
 
@@ -82,7 +81,7 @@ gradle clean android -Dhost=browserstack
 <img title="Allure Test Page" src="images/title/PageWithTest.png">
 </p>
 
-## 📱 :iphone: Отчет в Telegram
+## :robot: Отчет в Telegram
 
 <p align="center">
 <img title="Telegram notification message" src="images/title/TelegramBot.png">
