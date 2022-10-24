@@ -29,7 +29,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Задание №11-Онбординг")
+    @DisplayName("Проверка онбординга")
     void onboardingCheckTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))

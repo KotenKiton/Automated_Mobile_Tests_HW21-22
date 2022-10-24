@@ -52,18 +52,15 @@ gradle clean android -Dhost=local
 ```
 gradle clean android -Dhost=browserstack
 ```
-## :gear: Запуск тестов с выбором параметров
-<img title="Jenkins ParamStart" src="images/img_2.png">
+
 
 ## 👽 Отчет BrowserStack
-Пока бегут наши тесты в Jenkins, за ними можно подсматривать в личном кабинете BrowserStack - это очень занимательно, 
-а после прогона всех, нужным нам, тестов - сервис сгенерирует еще дополнительные и ценные отчеты по состоянию устройства, например.
-<img title="BrowserStack dashboard" src="images/img_1.png">
+<img title="BrowserStack dashboard" src="images/title/BrowserStackReport.png">
 
 ## :open_book: Allure отчет
 - ### Главный экран отчета
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/img_3.png">
+<img title="Allure Overview Dashboard" src="images/title/AllureMainPage.png">
 </p>
 
 - ### Страница с проведенными тестами
