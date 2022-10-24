@@ -38,9 +38,9 @@
 - Проверка кнопки, ведущую на подборки ежедневных статей
 
 ## :electric_plug: Сборка в Jenkins
-##### <a target="_blank" href="https://jenkins.autotests.cloud/job/swastest-mobile-tests-12/">Сборка в Jenkins</a>
+##### <a target="_blank" href="https://jenkins.autotests.cloud/job/Automated_Mobile_Tests_HW21-22/">Сборка в Jenkins</a>
 <p align="center">
-<img title="Jenkins Dashboard" src="images/img.png">
+<img title="Jenkins Dashboard" src="images/title/AssemblyInJenkins.png">
 </p>  
 
 ## :arrow_forward: Запуск из терминала
