@@ -33,7 +33,7 @@
 
 ## :notebook_with_decorative_cover: Реализованные проверки
 
-- Проверка онбординга
+- Проверка 'онбординга'
 - Проверка кнопки 'поиск'
 - Проверка экрана 'Saved'
 - Проверка экрана 'Log in/Join Wiki' через экран 'Saved'
@@ -92,4 +92,7 @@ gradle clean android -Dhost=browserstack
 <p align="center">
   <img title="Selenoid Video" src="images/title/ExampleTest.gif">
 </p>
+:arrow_up: [Вверх страницы](#anchor)
+
+:new_moon_with_face: <a target="_blank" href="https://t.me/BiLLGradLe">t.me/BiLLGradLe</a>
 
