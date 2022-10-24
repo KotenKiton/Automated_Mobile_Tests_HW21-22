@@ -67,6 +67,7 @@ gradle clean android -Dhost=browserstack
 <p align="center">
 <img title="BrowserStack dashboard" src="images/title/BrowserStackReport.png">
 </p>
+
 ## :open_book: Allure отчет
 
 - ### Главный экран отчета
