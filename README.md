@@ -12,7 +12,6 @@
 - <a href="#arrow_forward-запуск-из-терминала">Запуск из терминала</a>
 - <a href="#👽-отчет-browserstack">Отчет BrowserStack</a>
 - <a href="#open_book-allure-отчет">Allure отчет</a>
-- <a href="#hammer-allure-test-ops-отчет">Allure Test Ops отчет</a>
 - <a href="#robot-отчет-в-telegram">Отчет в Telegram</a>
 - <a href="#film_projector-видео-пример-прохождения-тестов">Видео пример прохождения тестов</a>
 
@@ -91,6 +90,6 @@ gradle clean android -Dhost=browserstack
 
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="images/876f475c91f3138b9272c6559f5864e2fcca7ea3.gif">
+  <img title="Selenoid Video" src="images/title/ExampleTest.gif">
 </p>
 
