@@ -61,6 +61,7 @@ gradle clean android -Dhost=local
 ```
 gradle clean android -Dhost=browserstack
 ```
+
 <p align="center">
 ## :computer: Отчет BrowserStack
 </p>
@@ -86,13 +87,19 @@ gradle clean android -Dhost=browserstack
 <img title="Telegram notification message" src="images/title/TelegramBot.png">
 </p>
 
+Кроме красочной инфографики доступна возможность перейти по ссылке для
+просмотра [отчёта](https://jenkins.autotests.cloud/job/Automated_Mobile_Tests_HW21-22/13/allure/)
+
 ## :film_projector: Видео пример прохождения тестов
 
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
   <img title="Selenoid Video" src="images/title/ExampleTest.gif">
 </p>
+
 :arrow_up: [Вверх страницы](#anchor)
 
 :new_moon_with_face: <a target="_blank" href="https://t.me/BiLLGradLe">t.me/BiLLGradLe</a>
+
+---
 
