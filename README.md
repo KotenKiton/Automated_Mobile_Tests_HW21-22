@@ -1,5 +1,5 @@
 # Проект по автоматизации тестирования android-приложения  "Wikipedia"
-<img title="Wiki img" src="images/title/Title_Wiki.jpeg">
+<img title="Wiki img" src="images/title/Title_WIki.jpeg">
 
 #### <a target="_blank" href="https://github.com/wikimedia/apps-android-wikipedia/releases">Ссылка на репозиторий приложения</a>
 
