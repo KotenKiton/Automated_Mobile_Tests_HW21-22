@@ -79,19 +79,13 @@ gradle clean android -Dhost=browserstack
 - ### Страница с проведенными тестами
 
 <p align="center">
-<img title="Allure Test Page" src="images/img_4.png">
+<img title="Allure Test Page" src="images/title/PageWithTest.png">
 </p>
 
-## :hammer: Allure Test Ops отчет
+## 📱 :iphone: Отчет в Telegram
 
 <p align="center">
-<img title="Allure Test Ops Launch" src="images/img_5.png">
-</p>
-
-## :robot: Отчет в Telegram
-
-<p align="center">
-<img title="Telegram notification message" src="images/img_6.png">
+<img title="Telegram notification message" src="images/title/TelegramBot.png">
 </p>
 
 ## :film_projector: Видео пример прохождения тестов
