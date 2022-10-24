@@ -2,7 +2,7 @@
 
 <img title="Wiki img" src="images/title/Title_WIki.jpeg">
 <a id="anchor"></a>
-#### <a target="_blank" href="https://github.com/wikimedia/apps-android-wikipedia/releases">Ссылка на репозиторий приложения</a>
+ <a target="_blank" href="https://github.com/wikimedia/apps-android-wikipedia/releases">Ссылка на репозиторий приложения</a>
 
 ## :page_with_curl: Содержание:
 
@@ -33,12 +33,12 @@
 
 ## :notebook_with_decorative_cover: Реализованные проверки
 
-- Проверка 'онбординга'
-- Проверка кнопки 'поиск'
+- Проверка кнопки 'Search Wikipedia'
 - Проверка экрана 'Saved'
 - Проверка экрана 'Log in/Join Wiki' через экран 'Saved'
 - Проверка экрана 'Edits'
-- Проверка экрана 'Log in/Join Wiki' через экран Edits
+- Проверка экрана 'Log in/Join Wiki' через экран 'Edits'
+- Проверка 'Onboarding '
 
 ## :electric_plug: Сборка в Jenkins
 
@@ -62,11 +62,11 @@ gradle clean android -Dhost=local
 gradle clean android -Dhost=browserstack
 ```
 
-<p align="center">
 ## :computer: Отчет BrowserStack
-</p>
-<img title="BrowserStack dashboard" src="images/title/BrowserStackReport.png">
 
+<p align="center">
+<img title="BrowserStack dashboard" src="images/title/BrowserStackReport.png">
+</p>
 ## :open_book: Allure отчет
 
 - ### Главный экран отчета
