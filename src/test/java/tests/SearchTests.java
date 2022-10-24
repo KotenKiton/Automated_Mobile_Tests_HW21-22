@@ -1,4 +1,4 @@
-package tests.local;
+package tests;
 
 import com.codeborne.selenide.CollectionCondition;
 import io.appium.java_client.AppiumBy;
