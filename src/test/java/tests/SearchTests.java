@@ -56,7 +56,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("'Запуск экрана Saved'")
+    @DisplayName("Запуск экрана 'Saved'")
     void savedScreenTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
@@ -89,7 +89,7 @@ public class SearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Запуск экрана 'Edits'")
+    @DisplayName("Запуска экрана 'Edits'")
     void editsScreenTest() {
         //switchTo().alert().accept();//Only for local tests.//For Browserstack need commit it
         back();
