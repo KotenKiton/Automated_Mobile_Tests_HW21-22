@@ -25,7 +25,6 @@ public class SearchTests extends TestBase {
         step("Verify content found", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
                         .shouldHave(CollectionCondition.sizeGreaterThan(0)));
-
     }
 
     @Test
@@ -101,7 +100,6 @@ public class SearchTests extends TestBase {
                         ".widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android" +
                         ".widget.TextView"))
                         .shouldHave(text("Edits")));
-
     }
 
     @Test

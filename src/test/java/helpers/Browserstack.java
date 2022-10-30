@@ -1,6 +1,6 @@
 package helpers;
 
-import config.BrowserstackKeys;
+import config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
@@ -10,7 +10,7 @@ public class Browserstack {
 
     public static String videoUrl(String sessionId) {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
-        BrowserstackKeys config = ConfigFactory.create(BrowserstackKeys.class, System.getProperties());
+        BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
         String login = config.login();
         String password = config.password();
         return given()

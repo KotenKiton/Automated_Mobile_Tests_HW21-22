@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.BrowserstackKeys;
+import config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -14,7 +14,7 @@ import java.net.URL;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
-    static BrowserstackKeys browserStackConfig = ConfigFactory.create(BrowserstackKeys.class, System.getProperties());
+    static BrowserstackConfig browserStackConfig = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
 
     @Override
     public WebDriver createDriver(Capabilities capabilities) {

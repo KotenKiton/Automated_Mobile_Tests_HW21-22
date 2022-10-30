@@ -7,7 +7,7 @@ import org.aeonbits.owner.Config;
         "system:properties",
         "classpath:config/browserstack.properties"
 })
-public interface BrowserstackKeys extends Config {
+public interface BrowserstackConfig extends Config {
 
     String login();
 
