@@ -18,7 +18,6 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
 
-
 public class TestBase {
     //static String deviceHost = System.getProperty("deviceHost", "local"); //локально
 
