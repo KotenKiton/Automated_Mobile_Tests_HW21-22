@@ -11,8 +11,6 @@ public interface LocalConfig extends Config {
     @DefaultValue("Pixel 3 API 33")
     String device();
 
-
     @DefaultValue("http://localhost:4723/wd/hub")
     String appURL();
-
 }
